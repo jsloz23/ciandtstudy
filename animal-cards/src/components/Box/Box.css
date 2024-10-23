@@ -1,0 +1,19 @@
+.box {
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+@media (min-width: 768px) {
+  .box {
+    width: 80%; /* Grow to 80% of the screen width for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    width: 60%; /* Grow to 60% for even larger screens */
+  }
+}
