@@ -11,7 +11,7 @@ const Card = ({ name, type, description }) => {
   return (
     <div className="card">
       <h3 className="cardTitle">{name}</h3>
-      <hr style={{ borderColor }} />
+      <hr className="animalTypeColor" style={{ borderColor }} />
       <p>
         <strong>Type:</strong> {type}
       </p>

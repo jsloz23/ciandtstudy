@@ -4,9 +4,43 @@ import { createContext, useEffect, useState } from "react";
 export const FormDataContext = createContext();
 
 export const FormDataProvider = ({ children }) => {
+  // Default list of animals to show on first load
+  const defaultAnimals = [
+    {
+      name: "Elephant",
+      type: "Mammal",
+      description: "Large land animal with a trunk",
+    },
+    {
+      name: "Eagle",
+      type: "Bird",
+      description: "Bird of prey with excellent vision",
+    },
+    {
+      name: "Frog",
+      type: "Amphibian",
+      description: "Small creature that can live in water and on land",
+    },
+    {
+      name: "Octopus",
+      type: "Invertebrate",
+      description: "Sea creature with eight arms",
+    },
+    {
+      name: "Salmon",
+      type: "Fish",
+      description: "Fish known for swimming upstream",
+    },
+    {
+      name: "Lizard",
+      type: "Reptile",
+      description: "Cold-blooded animal with scaly skin",
+    },
+  ];
+
   const [submissions, setSubmissions] = useState(() => {
     const savedSubmissions = localStorage.getItem("submissions");
-    return savedSubmissions ? JSON.parse(savedSubmissions) : [];
+    return savedSubmissions ? JSON.parse(savedSubmissions) : defaultAnimals;
   });
 
   useEffect(() => {

@@ -1,3 +1,9 @@
+.scrollableContainer {
+  max-height: 60vh; /* Limits the height to 60% of viewport height */
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+  padding: 10px; /* Optional padding */
+}
+
 .cardContainer {
   display: grid;
   grid-template-columns: 1fr;
@@ -8,7 +14,7 @@
 @media (min-width: 768px) {
   .cardContainer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     text-align: center;
   }

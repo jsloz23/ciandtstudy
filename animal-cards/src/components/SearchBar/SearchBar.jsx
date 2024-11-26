@@ -5,15 +5,9 @@ const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
   const handleInputChange = (e) => {
-    setQuery(e.target.value);
-  };
-
-  const handleSearch = () => {
-    if (query.trim()) {
-      onSearch(query);
-    } else {
-      onSearch("");
-    }
+    const newQuery = e.target.value;
+    setQuery(newQuery);
+    onSearch(newQuery); // Call onSearch immediately as user types
   };
 
   return (
@@ -24,7 +18,6 @@ const SearchBar = ({ onSearch }) => {
         onChange={handleInputChange}
         placeholder="Search by name..."
       />
-      <button onClick={handleSearch}>Enter</button>
     </div>
   );
 };

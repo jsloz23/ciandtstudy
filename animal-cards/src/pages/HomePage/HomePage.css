@@ -21,3 +21,12 @@
     justify-content: space-around;
   }
 }
+
+.filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters > *:not(:last-child) {
+  margin-bottom: 16px;
+}

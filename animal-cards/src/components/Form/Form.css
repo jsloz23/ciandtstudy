@@ -36,3 +36,44 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Styles for error highlighting */
+.inputError {
+  border: 1px solid red;
+}
+
+.errorText {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Hover state: change border color and background */
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #90caf9; /* Light blue border on hover */
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Focus state: thicker border and subtle shadow */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4caf50; /* Green border on focus */
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Subtle green shadow */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Active state: when clicking or tapping the input */
+input:active,
+select:active,
+textarea:active {
+  border-color: #388e3c; /* Darker green border on active */
+  background-color: #f1f8e9; /* Very light green background */
+}
+
+.successMessage {
+  color: #4caf50;
+}
